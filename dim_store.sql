@@ -18,3 +18,4 @@ ALTER COLUMN country_code TYPE varchar(2);
 
 ALTER TABLE dim_store_details
 ALTER COLUMN continent TYPE varchar(255);
+
