@@ -66,6 +66,7 @@ class DataCleaning:
         self.products_df = products_df
         self.products_df = pd.read_csv('products.csv')
         self.products_df = self.products_df.rename(columns={'Unnamed: 0': 'index'})
+        self.products_df = self.products_df.rename(columns={'EAN': 'ean'})
         self.products_df = self.products_df.set_index(['index'])
         self.products_df['date_added'] = self.products_df['date_added'].apply(pd.to_datetime, errors='ignore')
         self.categories = ['toys-and-games', 'sports-and-leisure', 'pets', 'homeware', 'health-and-beauty', 'food-and-drink', 'diy']
@@ -86,7 +87,7 @@ class DataCleaning:
 
         self.final_product_df['weight'] = np.where(self.final_product_df['weight_units'] == 'not in kg', self.final_product_df['weight'] / 1000, self.final_product_df['weight'])
 
-        self.final_product_df = self.final_product_df.rename(columns={'weight': 'weight (kg)'})
+        self.final_product_df = self.final_product_df.rename(columns={'weight': 'weight_kg'})
         self.final_product_df = self.final_product_df.drop(columns=['in_kg', 'weight_units'])
 
         return self.final_product_df
@@ -107,8 +108,6 @@ class DataCleaning:
         self.dates_df['date'] = pd.to_datetime(self.dates_df[['year', 'month', 'day']])
         self.dates_df['date'] = self.dates_df['date'].astype(str)
         self.dates_df['date'] = pd.to_datetime(self.dates_df['date'] + ' ' + self.dates_df['timestamp'])
-
-        self.dates_df = self.dates_df.drop(columns=['month', 'year', 'day', 'timestamp'])
 
         return self.dates_df
 

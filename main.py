@@ -50,9 +50,9 @@ cleaned_dates = cleaned.clean_dates_data(dates_df)
 
 # UPLOADING ------------------------------------------------------------------------------------------------------------------------
 
-engine_1.upload_to_db(cleaned_users, 'dim_users')
-engine_1.upload_to_db(cleaned_cards, 'dim_card_details')
-engine_1.upload_to_db(cleaned_stores, 'dim_store_details')
-engine_1.upload_to_db(cleaned_products, 'dim_products')
-engine_1.upload_to_db(cleaned_orders, 'orders_table')
+#engine_1.upload_to_db(cleaned_users, 'dim_users')
+#engine_1.upload_to_db(cleaned_cards, 'dim_card_details')
+#engine_1.upload_to_db(cleaned_stores, 'dim_store_details')
+#engine_1.upload_to_db(cleaned_products, 'dim_products')
+#engine_1.upload_to_db(cleaned_orders, 'orders_table')
 engine_1.upload_to_db(cleaned_dates, 'dim_date_times')
