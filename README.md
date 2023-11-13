@@ -4,6 +4,7 @@
 
 ## Contents
 - Extracting and Cleaning
+- Changing Datatypes
 
 
 
@@ -14,4 +15,8 @@ Data was first extracted from a secondary database and was downloaded and read a
 Data was further extracted from and AWS S3 bucket and converted directly to a DataFrame using *tabula-py* package. Other data was extracted from an AWS S3 bucet as well, this time it was downloaded and saved to a file in the local computer using *boto3* package. Finally, data was extract through the use of an api, a for loop was created to allow each data set retrieved to be appended to the empty DataFrame.
 
 All data was now extracted so can be passed through the *DataCleaning* class, each *pandas DataFrame(df)* has an individual method to be cleaned which can be called from the main file.Finally, *DataConnector* class was initialise and called to allow each newly cleaned table to be uploaded to the *sales-data* database.
+
+# Changing Datatypes
+SQL tools were used to enable us to change the datatypes within each of our tables, utilsing *ALTER COLUMN to TYPE* allowed the changing. A connection was set up the the pgAdmin database, *sales_data*, and the changes were done directly in VSCode with the changes being checked directly in pgAdmin. 
+Once all the columns were of the correct datatype, primary and foreign keys were set up to finlise the star-based schema, making sure each foreign key referenced the ocrrect primary ey inn the corresponding table.
 
