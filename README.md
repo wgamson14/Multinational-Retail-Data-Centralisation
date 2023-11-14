@@ -5,6 +5,7 @@
 ## Contents
 - Extracting and Cleaning
 - Changing Datatypes
+- Querying the Data
 
 
 
@@ -18,5 +19,8 @@ All data was now extracted so can be passed through the *DataCleaning* class, ea
 
 # Changing Datatypes
 SQL tools were used to enable us to change the datatypes within each of our tables, utilsing *ALTER COLUMN to TYPE* allowed the changing. A connection was set up the the pgAdmin database, *sales_data*, and the changes were done directly in VSCode with the changes being checked directly in pgAdmin. 
-Once all the columns were of the correct datatype, primary and foreign keys were set up to finlise the star-based schema, making sure each foreign key referenced the ocrrect primary ey inn the corresponding table.
+Once all the columns were of the correct datatype, primary and foreign keys were set up to finlise the star-based schema, making sure each foreign key referenced the ocrrect primary key in the corresponding table.
+
+# Querying the Data
+Finally, the retail company wanted to use the freshly cleaned data to enhance their outlook on the store. Mutiple questions can be resolved based on querying the data by highlighting areas for imporvemnt iin sales etc. Examples included, finding which month is the most profitable for the company or finding the precentage of sales that were made from the website to analyse their online sales. 
 
