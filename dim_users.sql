@@ -15,4 +15,3 @@ ALTER COLUMN user_uuid TYPE uuid USING user_uuid::uuid;
 
 ALTER TABLE dim_users
 ALTER COLUMN join_date TYPE date;
-
