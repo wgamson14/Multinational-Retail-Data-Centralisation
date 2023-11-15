@@ -3,10 +3,33 @@
 **Overview:** In this project the aim the commpile together different forms of data from various sources, for a fictional retail company. The data must be download using the correct extraction method before being cleaned and eventually upload to the correct *sales_data* database on *pgAdmin*.
 
 ## Contents
+- File Structure
 - Extracting and Cleaning
 - Changing Datatypes
 - Querying the Data
 
+
+# File Structure
+## List of the  Relevant Files
+Files containing the classes and method for extracting, cleaning the data and connecting the database:
+- database_utils.py
+- data_cleaning.py
+- data_extraction.py
+
+Files used to chnage the data types in the respectve table using SQL:
+- dim_cards.sql
+- dim_date.sql
+- dim_products.sql
+- dim_store.sql
+- dim_users.sql
+- orders_table.sql
+
+Files used to create keys for the database:
+- primary_keys.sql
+- foregin_keys.sql
+
+File used to query the data for the retail company:
+- querying_data.sql
 
 
 # Extracting and Cleaning
