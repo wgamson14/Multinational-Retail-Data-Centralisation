@@ -98,7 +98,9 @@ LEFT OUTER JOIN
 LEFT OUTER JOIN
     dim_store_details ON dim_store_details.store_code = orders_table.store_code
 GROUP BY
-store_type;
+    store_type
+ORDER BY
+    percentage_total DESC;
 
 -- Returns total sales for a store type as a percentage of all sales
 
